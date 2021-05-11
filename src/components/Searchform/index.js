@@ -13,16 +13,10 @@ function Searchform(props) {
           list="users"
           type="text"
           className="form-control"
-          placeholder="Type the username again"
+          placeholder="Type the username here"
           id="employees"
         />
-        <button
-          type="submit"
-          onClick={props.handleFormSubmit}
-          className="btn btn-success"
-        >
-          Search
-        </button>
+
         <table id="users">
           <tr>
             <th>Image</th>
@@ -34,7 +28,7 @@ function Searchform(props) {
           {props.users.map((user, index) => (
             <tr key={index}>
               {console.log(user)}
-              <td><img src={user.picture.large}></img></td>
+              <td><img src={user.picture.medium}></img></td>
               <td>{user.name.title + " " + user.name.first + " " + user.name.last}</td>
               <td>{user.email}</td>
               <td>{user.dob.age}</td>
