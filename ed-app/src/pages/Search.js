@@ -14,9 +14,9 @@ class Search extends Component {
   componentDidMount() {
     API.getRandomUser()
       .then((res) => {
-          this.setState({ users: res.data.results } )
-        console.log(res)
-    })
+        this.setState({ users: res.data.results });
+        console.log(res);
+      })
       .catch((err) => console.log(err));
   }
 
@@ -39,7 +39,16 @@ class Search extends Component {
     return (
       <div>
         <Container style={{ minHeight: "80%" }}>
-          <h1 className="text-center">Search Users!</h1>
+          <h1
+            className="text-center"
+            style={{
+              textAlign: "center",
+              fontFamily: "cursive",
+              fontSize: "40px",
+            }}
+          >
+            Employee Directory
+          </h1>
           <Searchform
             handleFormSubmit={this.handleFormSubmit}
             handleInputChange={this.handleInputChange}

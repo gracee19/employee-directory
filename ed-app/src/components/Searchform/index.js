@@ -5,7 +5,7 @@ function Searchform(props) {
   return (
     <form className="search">
       <div className="form-group">
-        <label htmlFor="users">UserName:</label>
+        <label htmlFor="users">Please Type Username</label>
         <input
           value={props.search}
           onChange={props.handleInputChange}
@@ -16,17 +16,32 @@ function Searchform(props) {
           placeholder="Type the username again"
           id="employees"
         />
-        <datalist id="users">
-          {props.users.map((users) => (
-            <option value={users} key={users} />
-          ))}
-       </datalist>
         <button
           type="submit"
           onClick={props.handleFormSubmit}
-          className="btn btn-success">
+          className="btn btn-success"
+        >
           Search
         </button>
+        <table id="users">
+          <tr>
+            <th>Image</th>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Age</th>
+            <th>Gender</th>
+          </tr>
+          {props.users.map((user, index) => (
+            <tr key={index}>
+              {console.log(user)}
+              <td>{props.users.map(user.picture.large)}</td>
+              <td>{props.users.map(user.name)}</td>
+              <td>{props.users.map(user.email)}</td>
+              <td>{props.users.map(user.dob.age)}</td>
+              <td>{props.users.map(user.gender)}</td>
+            </tr>
+          ))}
+        </table>
       </div>
     </form>
   );
