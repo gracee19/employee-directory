@@ -28,16 +28,19 @@ class Search extends Component {
     return (
       <div>
         <Container style={{ minHeight: "80%" }}>
-          <h1
+          <div
             className="text-center"
             style={{
               textAlign: "center",
               fontFamily: "cursive",
               fontSize: "40px",
+              background: "darksalmon",
+              paddingBottom:"20px",
+              paddingTop:"20px",
             }}
           >
             Employee Directory
-          </h1>
+          </div>
           <Searchform
             handleFormSubmit={this.handleFormSubmit}
             handleInputChange={this.handleInputChange}
