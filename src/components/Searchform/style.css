@@ -1,15 +1,13 @@
 form.search {
   overflow: auto;
-  margin-bottom: 50px;
-  
+  margin-bottom: 30px;
+  margin-top: 20px;
+
 }
 form.search label {
-  padding-right: 20px;
-  padding-left: 10px;
-  
-}
-form.search button[type="submit"] {
-  margin-top: 10px;
+  padding-right: 15px;
+  padding-left: 480px;
+  size: 15px;
   
 }
 th {
@@ -24,6 +22,7 @@ table{
   width: auto;
   text-align: center;
 }
-tr{
-  margin-bottom: 50px;
+
+tr:nth-child(even) {
+  background-color: darksalmon;
 }
